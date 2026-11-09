@@ -15,4 +15,17 @@
 #
 #
 
-__author__ = 'Yoel Nunez'
+"""Linear (one-dimensional) barcodes: UPC-A, EAN-13 and Code 39.
+
+    from openbarcode.linear import UPC, EAN, Code39
+"""
+
+__author__ = 'Yoel Nunez <y.nunez@developers.floms.com>'
+
+from .base import LinearBarcode
+from .code39 import Code39
+from .ean import EAN
+from .gs1 import calculate_check_digit
+from .upc import UPC
+
+__all__ = ['LinearBarcode', 'UPC', 'EAN', 'Code39', 'calculate_check_digit']
