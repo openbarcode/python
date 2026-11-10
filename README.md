@@ -66,7 +66,7 @@ To run against the source tree without installing, set `PYTHONPATH=src`:
 PYTHONPATH=src python -m unittest discover -s tests -t .
 ```
 
-The continuous integration workflow in `.github/workflows/ci.yml` runs the same tests on Python 3.9 through 3.13.
+The continuous integration workflow in `.github/workflows/ci.yml` runs the same tests on Python 3.10 through 3.13.
 
 This repository was split from the original multi-language project at
 https://github.com/floms/Open-Barcode. The commit history was preserved
