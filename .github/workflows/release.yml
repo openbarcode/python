@@ -19,6 +19,9 @@ jobs:
         run: |
           VERSION=$(python -c "import re,pathlib; print(re.search(r'__version__ = [\'\"]([^\'\"]+)[\'\"]', pathlib.Path('src/openbarcode/__init__.py').read_text()).group(1))")
           test "v$VERSION" = "$GITHUB_REF_NAME"
+      - name: Install the package
+        run: python -m pip install .
+
       - name: Run tests
         run: python -m unittest discover -s tests -t .
 
